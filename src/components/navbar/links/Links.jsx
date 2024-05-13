@@ -1,18 +1,20 @@
-import Link from "next/link";
+"use client";
+
 import styles from "./links.module.css";
+import NavLink from "./navLink/navLink";
 
 const Links = () => {
   const links = [
     {
-      title: "Homepage",
+      title: "Ana sayfa",
       path: "/",
     },
     {
-      title: "About",
+      title: "Hakkımda",
       path: "/about",
     },
     {
-      title: "Contact",
+      title: "İletişim",
       path: "/contact",
     },
     {
@@ -20,13 +22,23 @@ const Links = () => {
       path: "/blog",
     },
   ];
+
+  const session = true;
+  const isAdmin = true;
+
   return (
     <div className={styles.links}>
       {links.map((link) => (
-        <Link href={link.path} key={link.title}>
-          {link.title}
-        </Link>
+        <NavLink item={link} key={link.title} />
       ))}
+      {session ? (
+        <>
+          {isAdmin && <NavLink item={{ title: "Yönetici", path: "/admin" }} />}
+          <button className={styles.logout}>Çıkış</button>
+        </>
+      ) : (
+        <NavLink item={{ title: "Giriş", path: "/login" }} />
+      )}
     </div>
   );
 };
