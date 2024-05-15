@@ -11,8 +11,8 @@ export default function Home() {
           ad sit repellat tenetur labore eum architecto soluta quo ipsa ullam!
         </p>
         <div className={styles.buttons}>
-          <button className={styles.button}>Learn More</button>
-          <button className={styles.button}>Contact</button>
+          <button className={styles.button}>Daha fazlası</button>
+          <button className={styles.button}>İletişim</button>
         </div>
         <div className={styles.brands}>
           <Image src="/brands.png" alt="" fill className={styles.brandImg} />
