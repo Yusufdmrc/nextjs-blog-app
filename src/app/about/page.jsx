@@ -5,28 +5,36 @@ const AboutPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
-        <h2 className={styles.subtitle}>Hakkımda</h2>
         <h1 className={styles.title}>
-          We create digital ideas that are bigger, bolder, braver and better.
+          Yazılım dünyasındaki yeniliklerle dolu bloguma hoş geldiniz!
         </h1>
         <p className={styles.desc}>
-          We create digital ideas that are bigger, bolder, braver and better. We
-          believe in good ideas flexibility and precission were worlds Our
-          Special Team best consulting & finance solution provider. Wide range
-          of web and software development services.
+          Doğuş Üniversitesi yazılım mühendisliği son sınıf öğrenciyim.Aynı
+          zamanda bir yazılım şirketinde frontend web ve mobil alanında
+          çalışıyorum.
+          <br />
+          <br />
+          Typescript ve React kullanarak projeler yapıyorum. Ayrıca Next.js
+          öğreniyorum ve ileride full-stack developer olmak istiyorum.Backend
+          alanında ise C# programlama dilini ve ASP.NET MVC Frameworkü temel
+          düzeyde biliyorum.
         </p>
         <div className={styles.boxes}>
           <div className={styles.box}>
-            <h1>10 K+</h1>
-            <p>Year of experience</p>
+            <h1>Javascript</h1>
+            <p>Orta Düzey</p>
           </div>
           <div className={styles.box}>
-            <h1>10 K+</h1>
-            <p>Year of experience</p>
+            <h1>React</h1>
+            <p>Orta Düzey</p>
           </div>
           <div className={styles.box}>
-            <h1>10 K+</h1>
-            <p>Year of experience</p>
+            <h1>Next.js</h1>
+            <p>Orta Düzey</p>
+          </div>
+          <div className={styles.box}>
+            <h1>Css</h1>
+            <p>Orta Düzey</p>
           </div>
         </div>
       </div>

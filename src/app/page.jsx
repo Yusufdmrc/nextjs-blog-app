@@ -1,22 +1,29 @@
 import Image from "next/image";
 import styles from "./home.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
-        <h1 className={styles.title}>Creative Thoughts Agency</h1>
+        <h1 className={styles.title}>Yusuf Demirci Blog</h1>
         <p className={styles.desc}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate
-          ad sit repellat tenetur labore eum architecto soluta quo ipsa ullam!
+          Merhaba! Kişisel bloguma hoş geldiniz. Burada, günlük yaşamım,
+          seyahatlerim, hobilerim ve ilgi alanlarım hakkında yazılar
+          paylaşıyorum. İlginizi çekecek içerikler bulacağınızı umuyorum.
+          Keyifli okumalar!
         </p>
         <div className={styles.buttons}>
-          <button className={styles.button}>Daha fazlası</button>
-          <button className={styles.button}>İletişim</button>
+          <Link href="/blog">
+            <button className={styles.button}>Daha fazlası</button>
+          </Link>
+          <Link href="/contact">
+            <button className={styles.button}>İletişim</button>
+          </Link>
         </div>
-        <div className={styles.brands}>
+        {/* <div className={styles.brands}>
           <Image src="/brands.png" alt="" fill className={styles.brandImg} />
-        </div>
+        </div> */}
       </div>
       <div className={styles.imgContainer}>
         <Image src="/hero.gif" alt="" fill className={styles.heroImg} />
