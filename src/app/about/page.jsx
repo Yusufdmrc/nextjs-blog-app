@@ -5,13 +5,11 @@ const AboutPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
-        <h1 className={styles.title}>
-          Yazılım dünyasındaki yeniliklerle dolu bloguma hoş geldiniz!
-        </h1>
+        <h1 className={styles.title}>Hakkımda</h1>
         <p className={styles.desc}>
           Doğuş Üniversitesi yazılım mühendisliği son sınıf öğrenciyim.Aynı
-          zamanda bir yazılım şirketinde frontend web ve mobil alanında
-          çalışıyorum.
+          zamanda bir yazılım şirketinde frontend web ve mobil uygulama
+          geliştirme alanında çalışıyorum.
           <br />
           <br />
           Typescript ve React kullanarak projeler yapıyorum. Ayrıca Next.js
@@ -39,7 +37,12 @@ const AboutPage = () => {
         </div>
       </div>
       <div className={styles.imgContainer}>
-        <Image src="/about.png" alt="About Image" fill className={styles.img} />
+        <Image
+          src="/about7.png"
+          alt="About Image"
+          fill
+          className={styles.img}
+        />
       </div>
     </div>
   );

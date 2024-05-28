@@ -11,7 +11,7 @@
 }
 
 .title {
-  font-size: 96px;
+  font-size: 46px;
 }
 
 .desc {
@@ -46,6 +46,11 @@
 .imgContainer {
   flex: 1;
   position: relative;
+}
+
+.heroImg {
+  object-fit: cover;
+  border-radius: 20px;
 }
 
 @media (max-width: 1024px) {

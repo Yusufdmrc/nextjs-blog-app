@@ -42,6 +42,7 @@
 .imgContainer {
   flex: 1;
   position: relative;
+  border-radius: 40px;
 }
 
 .img {

@@ -7,7 +7,7 @@ const LoginForm = () => {
     <form className={styles.form}>
       <input type="text" placeholder="Kullanıcı Adı" name="username" />
       <input type="password" placeholder="Şifre" name="password" />
-      <button>Login</button>
+      <button>Giriş Yap</button>
 
       <Link href="/register">
         {"Hesabın yok mu?"} <b>Kayıt Ol</b>

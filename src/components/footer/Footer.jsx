@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className={styles.container}>
       <div className={styles.logo}>MAX BLOG</div>
-      <div className={styles.text}>© Tüm haklar saklıdır.</div>
+      <div className={styles.text}></div>
     </div>
   );
 };

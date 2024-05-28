@@ -6,10 +6,12 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
-        <h1 className={styles.title}>Yusuf Demirci Blog</h1>
+        <h1 className={styles.title}>
+          Yazılım dünyasındaki yeniliklerle dolu bloguma hoş geldiniz!
+        </h1>
         <p className={styles.desc}>
           Merhaba! Kişisel bloguma hoş geldiniz. Burada, günlük yaşamım,
-          seyahatlerim, hobilerim ve ilgi alanlarım hakkında yazılar
+          seyahatlerim, hobilerim ve yazılım sektörü hakkında yazılar
           paylaşıyorum. İlginizi çekecek içerikler bulacağınızı umuyorum.
           Keyifli okumalar!
         </p>
@@ -26,7 +28,7 @@ export default function Home() {
         </div> */}
       </div>
       <div className={styles.imgContainer}>
-        <Image src="/hero.gif" alt="" fill className={styles.heroImg} />
+        <Image src="/hero2.png" alt="" fill className={styles.heroImg} />
       </div>
     </div>
   );
