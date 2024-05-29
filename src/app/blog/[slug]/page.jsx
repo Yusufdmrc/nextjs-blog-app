@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./singlePost.module.css";
-import { PostUser } from "../../../components//postUser/postUser";
+import PostUser from "../../../components/postUser/PostUser";
 import { Suspense } from "react";
 import { getPost } from "../../../lib/data";
 
@@ -24,24 +24,14 @@ const SinglePostPage = async ({ params }) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.imgContainer}>
-        <Image
-          src="https://images.pexels.com/photos/1089440/pexels-photo-1089440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          alt=""
-          fill
-          className={styles.img}
-        />
-      </div>
+      {post.img && (
+        <div className={styles.imgContainer}>
+          <Image src={post.img} alt="" fill className={styles.img} />
+        </div>
+      )}
       <div className={styles.textContainer}>
-        <h1 className={styles.title}>{post?.title}</h1>
+        <h1 className={styles.title}>{post.title}</h1>
         <div className={styles.detail}>
-          <Image
-            src="https://images.pexels.com/photos/18338026/pexels-photo-18338026/free-photo-of-kent-sehir-kent-simgesi-gorulecek-yer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            alt=""
-            width={50}
-            height={50}
-            className={styles.avatar}
-          />
           {post && (
             <Suspense fallback={<div>Yükleniyor...</div>}>
               <PostUser userId={post.userId} />
@@ -49,10 +39,12 @@ const SinglePostPage = async ({ params }) => {
           )}
           <div className={styles.detailText}>
             <span className={styles.detailTitle}>Yayınlandı</span>
-            <span className={styles.detailValue}>18.05.2024</span>
+            <span className={styles.detailValue}>
+              {post.createdAt.toString().slice(4, 16)}
+            </span>
           </div>
         </div>
-        <div className={styles.content}>{post?.body}</div>
+        <div className={styles.content}>{post.desc}</div>
       </div>
     </div>
   );
