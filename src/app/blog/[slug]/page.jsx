@@ -5,22 +5,22 @@ import { Suspense } from "react";
 import { getPost } from "../../../lib/data";
 
 //Fetch Data with an api
-// const getData = async (slug) => {
-//   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
+const getData = async (slug) => {
+  const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
 
-//   if (!res.ok) {
-//     throw new Error("Bir şeyler yanlış gitti");
-//   }
+  if (!res.ok) {
+    throw new Error("Bir şeyler yanlış gitti");
+  }
 
-//   return res.json();
-// };
+  return res.json();
+};
 
 const SinglePostPage = async ({ params }) => {
   const { slug } = params;
   //Fetch data with an api
-  // const post = await getData(slug);
+  const post = await getData(slug);
   //Fetch data without an api
-  const post = await getPost(slug);
+  // const post = await getPost(slug);
 
   return (
     <div className={styles.container}>
