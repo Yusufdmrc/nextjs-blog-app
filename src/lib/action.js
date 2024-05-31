@@ -1,7 +1,7 @@
 "use server";
 
 import { connectToDb } from "./utils";
-import { Post } from "./models";
+import { Post, User } from "./models";
 import { revalidatePath } from "next/cache";
 import { signIn, signOut } from "./auth";
 
@@ -59,7 +59,7 @@ export const register = async (previousState, formData) => {
     Object.fromEntries(formData);
 
   if (password !== passwordRepeat) {
-    return { error: "Passwords do not match" };
+    return { error: "Şifreler eşleşmiyor" };
   }
 
   try {
@@ -68,7 +68,7 @@ export const register = async (previousState, formData) => {
     const user = await User.findOne({ username });
 
     if (user) {
-      return { error: "Username already exists" };
+      return { error: "Kullanıcı zaten mevcut" };
     }
 
     const salt = await bcrypt.genSalt(10);
@@ -87,7 +87,7 @@ export const register = async (previousState, formData) => {
     return { success: true };
   } catch (err) {
     console.log(err);
-    return { error: "Something went wrong!" };
+    return { error: "Bir şeyler yanlış gitti!" };
   }
 };
 

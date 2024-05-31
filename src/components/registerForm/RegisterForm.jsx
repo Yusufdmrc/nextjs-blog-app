@@ -3,12 +3,13 @@
 import styles from "./registerForm.module.css";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { register } from "../../lib/action";
 
 const RegisterForm = () => {
   const router = useRouter();
 
   return (
-    <form className={styles.form}>
+    <form action={register} className={styles.form}>
       <input type="text" placeholder="Kullanıcı Adı" name="username" />
       <input type="email" placeholder="Email" name="email" />
       <input type="password" placeholder="Şifre" name="password" />
