@@ -1,11 +1,11 @@
 "use client";
 
-import styles from "./registerForm.module.css";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
 import { register } from "../../lib/action";
+import styles from "./registerForm.module.css";
 import { useFormState } from "react-dom";
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const RegisterForm = () => {
   const [state, formAction] = useFormState(register, undefined);
@@ -14,16 +14,16 @@ const RegisterForm = () => {
 
   useEffect(() => {
     state?.success && router.push("/login");
-  }, [state.success, router]);
+  }, [state?.success, router]);
 
   return (
-    <form action={formAction} className={styles.form}>
-      <input type="text" placeholder="Kullanıcı Adı" name="username" />
+    <form className={styles.form} action={formAction}>
+      <input type="text" placeholder="Kullancı Adı" name="username" />
       <input type="email" placeholder="Email" name="email" />
       <input type="password" placeholder="Şifre" name="password" />
       <input
         type="password"
-        placeholder="Şifreyi tekrar giriniz"
+        placeholder="Şifreyi yeniden giriniz"
         name="passwordRepeat"
       />
       <button>Kayıt Ol</button>
