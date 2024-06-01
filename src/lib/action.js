@@ -100,7 +100,7 @@ export const login = async (prevState, formData) => {
     console.log(err);
 
     if (err.message.includes("CredentialsSignin")) {
-      return { error: "Invalid username or password" };
+      return { error: "Geçersiz kullancı adı veya şifre" };
     }
     throw err;
   }
