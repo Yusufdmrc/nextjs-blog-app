@@ -11,19 +11,19 @@ const login = async (credentials) => {
     connectToDb();
     const user = await User.findOne({ username: credentials.username });
 
-    if (!user) throw new Error("Wrong credentials!");
+    if (!user) throw new Error("Yanlış kimlik bilgileri!");
 
     const isPasswordCorrect = await bcrypt.compare(
       credentials.password,
       user.password
     );
 
-    if (!isPasswordCorrect) throw new Error("Wrong credentials!");
+    if (!isPasswordCorrect) throw new Error("Yanlış kimlik bilgileri!");
 
     return user;
   } catch (err) {
     console.log(err);
-    throw new Error("Failed to login!");
+    throw new Error("Giriş yapılamadı!");
   }
 };
 
@@ -73,7 +73,6 @@ export const {
       }
       return true;
     },
-
     ...authConfig.callbacks,
   },
 });

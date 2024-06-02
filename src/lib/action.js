@@ -7,10 +7,6 @@ import { signIn, signOut } from "./auth";
 import bcrypt from "bcryptjs";
 
 export const addPost = async (prevState, formData) => {
-  // const title = formData.get("title");
-  // const desc = formData.get("desc");
-  // const slug = formData.get("slug");
-
   const { title, desc, slug, userId } = Object.fromEntries(formData);
 
   try {
@@ -65,7 +61,7 @@ export const addUser = async (prevState, formData) => {
     revalidatePath("/admin");
   } catch (err) {
     console.log(err);
-    return { error: "Something went wrong!" };
+    return { error: "Bir şeyler yanlış gitti!" };
   }
 };
 
@@ -81,7 +77,7 @@ export const deleteUser = async (formData) => {
     revalidatePath("/admin");
   } catch (err) {
     console.log(err);
-    return { error: "Something went wrong!" };
+    return { error: "Bir şeyler yanlış gitti!" };
   }
 };
 
@@ -100,7 +96,7 @@ export const register = async (previousState, formData) => {
     Object.fromEntries(formData);
 
   if (password !== passwordRepeat) {
-    return { error: "Passwords do not match" };
+    return { error: "Şifreler eşleşmiyor" };
   }
 
   try {
@@ -109,7 +105,7 @@ export const register = async (previousState, formData) => {
     const user = await User.findOne({ username });
 
     if (user) {
-      return { error: "Username already exists" };
+      return { error: "Kullanıcı adı zaten mevcut" };
     }
 
     const salt = await bcrypt.genSalt(10);
@@ -128,7 +124,7 @@ export const register = async (previousState, formData) => {
     return { success: true };
   } catch (err) {
     console.log(err);
-    return { error: "Something went wrong!" };
+    return { error: "Bir şeyler yanlış gitti!" };
   }
 };
 
@@ -141,7 +137,7 @@ export const login = async (prevState, formData) => {
     console.log(err);
 
     if (err.message.includes("CredentialsSignin")) {
-      return { error: "Invalid username or password" };
+      return { error: "Geçersiz kullanıcı adı veya şifre" };
     }
     throw err;
   }
