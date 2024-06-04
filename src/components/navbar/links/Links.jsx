@@ -16,12 +16,12 @@ const links = [
     path: "/about",
   },
   {
-    title: "İletişim",
-    path: "/contact",
-  },
-  {
     title: "Blog",
     path: "/blog",
+  },
+  {
+    title: "İletişim",
+    path: "/contact",
   },
 ];
 

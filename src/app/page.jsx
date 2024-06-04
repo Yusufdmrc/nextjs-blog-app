@@ -11,9 +11,8 @@ export default function Home() {
         </h1>
         <p className={styles.desc}>
           Merhaba! Kişisel bloguma hoş geldiniz. Burada, günlük yaşamım,
-          seyahatlerim, hobilerim ve yazılım sektörü hakkında yazılar
-          paylaşıyorum. İlginizi çekecek içerikler bulacağınızı umuyorum.
-          Keyifli okumalar!
+          hobilerim ve yazılım sektörü hakkında yazılar paylaşıyorum. İlginizi
+          çekecek içerikler bulacağınızı umuyorum. Keyifli okumalar!
         </p>
         <div className={styles.buttons}>
           <Link href="/blog">
