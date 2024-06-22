@@ -11,8 +11,8 @@ Bu proje, kullanıcıların blog yazıları oluşturmasını, düzenlemesini ve 
 
 
 ## Kullanılan Teknolojiler
-- **React: Kullanıcı arayüzlerini oluşturmak için kullanılan bir JavaScript kütüphanesidir.
-- **Next.js: React tabanlı, sunucu tarafı render (SSR) ve statik site oluşturma (SSG) özellikleri sunan bir frameworktür.
-- **MongoDB: NoSQL veritabanı yönetim sistemi, verileri JSON benzeri belgelerle saklar.
-- **Mongoose: MongoDB ile uygulama arasında bağlantı kurmayı ve şemalar üzerinden veri modellemeyi sağlayan bir ODM kütüphanesidir.
-- **Bcrypt: Parola hashleme ve doğrulama işlemleri için kullanılan bir kütüphanedir.
+- **React**: Kullanıcı arayüzlerini oluşturmak için kullanılan bir JavaScript kütüphanesidir.
+- **Next.js**: React tabanlı, sunucu tarafı render (SSR) ve statik site oluşturma (SSG) özellikleri sunan bir frameworktür.
+- **MongoDB**: NoSQL veritabanı yönetim sistemi, verileri JSON benzeri belgelerle saklar.
+- **Mongoose**: MongoDB ile uygulama arasında bağlantı kurmayı ve şemalar üzerinden veri modellemeyi sağlayan bir ODM kütüphanesidir.
+- **Bcrypt**: Parola hashleme ve doğrulama işlemleri için kullanılan bir kütüphanedir.
